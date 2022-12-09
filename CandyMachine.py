@@ -5,10 +5,7 @@ class CashRegister:
     # Initializing the Parameter with default value of 500
     # If the parameter is less than 0, it will be assigned as 500
     def __init__(self, CashOnHand = 500):
-        if CashOnHand < 0:
-            self.CashOnHand = 500
-        else:
-            self.CashOnHand = CashOnHand
+        self.CashOnHand = CashOnHand
 
     # Check the current balance
     def CurrentBalance(self):
@@ -24,14 +21,8 @@ class Dispenser:
     # Initializing the Parameter both with default value of 50
     # If the parameter is less than 0, it will be assigned as 50
     def __init__(self, NumberOfItems = 50, CostOfItems = 50):
-        if NumberOfItems < 0:
-            self.NumberOfItems = 50
-        else:
-            self.NumberOfItems = NumberOfItems
-        if CostOfItems < 0:
-            self.CostOfItems = 50
-        else:
-            self.CostOfItems = CostOfItems
+        self.NumberOfItems = NumberOfItems
+        self.CostOfItems = CostOfItems
     
     # Returns the number of a particular product
     def GetCount(self):
