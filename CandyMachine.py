@@ -1,3 +1,4 @@
+# CANDY MACHINE
 # Cash Register class
 class CashRegister:
 
@@ -51,6 +52,7 @@ class MainProgram:
     # Shows the choices the user can choose
     def ShowSelection(self):
         global UserInput
+        print("-------------------------------------")
         print("**** Welcome to Cris' Candy Shop ****")
         print("To select an item enter:")
         print("""
@@ -61,32 +63,40 @@ class MainProgram:
         0 to View Balance
         9 to Exit""")        
         UserInput = int(input("Enter your choice: "))
+        print("-------------------------------------")
     
     # The main operations of the program
     def SellProduct(self, Product, CRegister):
+
+        # Try and catch validation
         try:
             ItemNum = Product.GetCount()
             ItemCost = Product.GetProductCost()
+            
+            # If the product is available or not
+            # Asking user input, and calculating the change
             if ItemNum:
                 print("The product is still available.")
-                print(f"The cost of the product is {ItemCost}")
+                print(f"The cost of the product is {ItemCost} cents\n")
                 Pay = int(input("Enter amount: "))
-                print(f"Amount received is {Pay}")
+                print(f"\nAmount received is {Pay} cents.")
                 Change = Pay - ItemCost
 
+                # Returning the change of the user, otherwise returning the amount if not enough
                 if Change >= 0:
-                    print(f"Your change is {Change}")
+                    print(f"Your change is {Change} cents.\n")
                     print("Thank you for buying! Please Come Again")
                     CRegister.AcceptAmount(ItemCost)
                     Product.MakeSale()
                 else:
-                    print("The amount you have is not enough.")
+                    print("\nThe amount you have is not enough.")
                     print(f"You need {ItemCost - Pay} cents more.")
                     return
             else:
                 print("*Sold Out*")
                 print("The product is not available.")
 
+        # Except function, checks if the user input proper data type needed
         except ValueError:
             print("*Error*")
             print("The amount you have inputted can't be accepted.")  
@@ -115,17 +125,22 @@ class MainProgram:
             elif UserInput == 4:
                 self.SellProduct(Cookies, Cashier)
 
+            # If the user input 4, checks the current balance of the CashRegister
             elif UserInput == 0:
                 print(f'Your current balance is {Cashier.CurrentBalance()}.')
 
+            # If the user input 4, break the program
             elif UserInput == 9:
+                print("Thank you for buying, please come again!!!")
+                print("**** Cris' Candy Shop ****")
                 break
-
+            
+            # If the user input none in the choices, it will restart the program
             else:
                 print("Invalid Input")
                 print("Please Try Again.")
                 continue
-        
 
+# Calls to start the program      
 StartProgram = MainProgram()
 StartProgram.Choice()
