@@ -2,9 +2,6 @@ from tkinter import *
 
 # Function for Candy button -----------------------------------------------------------------------------------------------------------------
 def Candy():
-   
-    # Creating integer variable
-    Payment = IntVar()
 
     # Creating 2nd window
     window1.destroy()
@@ -47,14 +44,43 @@ def Candy():
     Label(window2, text = 'To buy Candy, please insert 10 cents:', font=' Helvetica 10').pack(side=TOP)
 
     # Creating the frame where the user can type
-    Pay = Entry(window2, textvariable = Payment,width=60,)
+    Pay = Entry(window2,width=60,)
     Pay.pack(pady = 10)
 
     # Check if the user input the right cost needed
     def Proceed():
-        if Pay.get() == '10':
+        a = int(Pay.get())
+
+        # If the user input exact amount
+        if a == 10:
             return Okay1()
 
+        # If the user input more than the exact amount
+        elif a >= 10:
+            # Create the 3rd window
+            window2.destroy()
+            window3 = Tk()
+            window3.title("Thank you, Come Again!!!")
+            window3.geometry("600x400+10+20")
+
+            # Function for Okay button in 3rd window
+            def Okay():
+                window3.destroy()
+                
+            # Blank space
+            canvas = Canvas(window3, width= 500, height= 10)
+            canvas.pack(side = TOP, pady = 10) 
+
+            # Calculate the Change
+            Base = int(10)
+            Label(window3, text = f'Your change is {a - Base} cents.', font=' Helvetica 10').pack(side=TOP, pady=5)
+           
+            # Label and Button for 3rd window
+            Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+
+            window3.mainloop()
+            
     # Creating the Ok and Cancel button
     Button(window2,width= 10, text="Okay",font="Helveica 10", command = Proceed).place(x = 180, y = 105)
     Button(window2,width= 10, text="Cancel",font="Helveica 10", command = Cancel).place(x = 320, y = 105)
@@ -113,9 +139,38 @@ def Chips():
 
     # Check if the user input the right cost needed
     def Proceed():
-        if Pay.get() == '50':
+        a = int(Pay.get())
+
+        # If the user input exact amount
+        if a == 50:
             return Okay2()
 
+        # If the user input more than the exact amount
+        elif a >= 50:
+            # Create the 3rd window
+            window2.destroy()
+            window3 = Tk()
+            window3.title("Thank you, Come Again!!!")
+            window3.geometry("600x400+10+20")
+
+            # Function for Okay button in 3rd window
+            def Okay():
+                window3.destroy()
+                
+            # Blank space
+            canvas = Canvas(window3, width= 500, height= 10)
+            canvas.pack(side = TOP, pady = 10) 
+
+            # Calculate the Change
+            Base = int(50)
+            Label(window3, text = f'Your change is {a - Base} cents.', font=' Helvetica 10').pack(side=TOP, pady=5)
+           
+            # Label and Button for 3rd window
+            Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+
+            window3.mainloop()
+            
     # Creating the Ok and Cancel button
     Button(window2,width= 10, text="Okay",font="Helveica 10", command = Proceed).place(x = 180, y = 105)
     Button(window2,width= 10, text="Cancel",font="Helveica 10", command = Cancel).place(x = 320, y = 105)
@@ -174,8 +229,37 @@ def Gum():
 
     # Check if the user input the right cost needed
     def Proceed():
-        if Pay.get() == '25':
+        a = int(Pay.get())
+
+        # If the user input exact amount
+        if a == 25:
             return Okay3()
+
+        # If the user input more than the exact amount
+        elif a >= 25:
+            # Create the 3rd window
+            window2.destroy()
+            window3 = Tk()
+            window3.title("Thank you, Come Again!!!")
+            window3.geometry("600x400+10+20")
+
+            # Function for Okay button in 3rd window
+            def Okay():
+                window3.destroy()
+                
+            # Blank space
+            canvas = Canvas(window3, width= 500, height= 10)
+            canvas.pack(side = TOP, pady = 10) 
+
+            # Calculate the Change
+            Base = int(25)
+            Label(window3, text = f'Your change is {a - Base} cents.', font=' Helvetica 10').pack(side=TOP, pady=5)
+           
+            # Label and Button for 3rd window
+            Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+
+            window3.mainloop()
 
     # Creating the Ok and Cancel button
     Button(window2,width= 10, text="Okay",font="Helveica 10", command = Proceed).place(x = 180, y = 105)
@@ -235,9 +319,38 @@ def Cookies():
 
     # Check if the user input the right cost needed
     def Proceed():
-        if Pay.get() == '90':
+        a = int(Pay.get())
+
+        # If the user input exact amount
+        if a == 90:
             return Okay4()
 
+        # If the user input more than the exact amount
+        elif a >= 90:
+            # Create the 3rd window
+            window2.destroy()
+            window3 = Tk()
+            window3.title("Thank you, Come Again!!!")
+            window3.geometry("600x400+10+20")
+
+            # Function for Okay button in 3rd window
+            def Okay():
+                window3.destroy()
+                
+            # Blank space
+            canvas = Canvas(window3, width= 500, height= 10)
+            canvas.pack(side = TOP, pady = 10) 
+
+            # Calculate the Change
+            Base = int(90)
+            Label(window3, text = f'Your change is {a - Base} cents.', font=' Helvetica 10').pack(side=TOP, pady=5)
+           
+            # Label and Button for 3rd window
+            Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+
+            window3.mainloop()
+           
     # Creating the Ok and Cancel button
     Button(window2,width= 10, text="Okay",font="Helveica 10", command = Proceed).place(x = 180, y = 105)
     Button(window2,width= 10, text="Cancel",font="Helveica 10", command = Cancel).place(x = 320, y = 105)
