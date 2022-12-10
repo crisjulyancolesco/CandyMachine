@@ -32,7 +32,7 @@ def Candy():
 
         # Label and Button for 3rd window
         Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
-        Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+        Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 105)
 
         window3.mainloop()
 
@@ -77,7 +77,34 @@ def Candy():
            
             # Label and Button for 3rd window
             Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
-            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 105)
+
+            window3.mainloop()
+
+        # If the user input less than the exact amount
+        elif a <= 10:
+            # Create the 3rd window
+            window2.destroy()
+            window3 = Tk()
+            window3.title("Thank you, Come Again!!!")
+            window3.geometry("600x400+10+20")
+
+            # Function for Okay button in 3rd window
+            def Okay():
+                window3.destroy()
+                
+            # Blank space
+            canvas = Canvas(window3, width= 500, height= 10)
+            canvas.pack(side = TOP, pady = 10) 
+
+            # Calculate the Lacking amount and display it
+            Base = int(10)
+            Label(window3, text = 'The amount you have is not enough.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            Label(window3, text = f'You need {Base - a} cents more.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            Label(window3, text = 'Please try again.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            
+            # Button for 3rd window
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 150)
 
             window3.mainloop()
             
@@ -122,7 +149,7 @@ def Chips():
 
         # Label and Button for 3rd window
         Label(window3, text = 'Please pick up your Chips and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
-        Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+        Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 105)
 
         window3.mainloop()
 
@@ -167,7 +194,34 @@ def Chips():
            
             # Label and Button for 3rd window
             Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
-            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 105)
+
+            window3.mainloop()
+            
+        # If the user input less than the exact amount
+        elif a <= 50:
+            # Create the 3rd window
+            window2.destroy()
+            window3 = Tk()
+            window3.title("Thank you, Come Again!!!")
+            window3.geometry("600x400+10+20")
+
+            # Function for Okay button in 3rd window
+            def Okay():
+                window3.destroy()
+                
+            # Blank space
+            canvas = Canvas(window3, width= 500, height= 10)
+            canvas.pack(side = TOP, pady = 10) 
+
+            # Calculate the Lacking amount and display it
+            Base = int(50)
+            Label(window3, text = 'The amount you have is not enough.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            Label(window3, text = f'You need {Base - a} cents more.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            Label(window3, text = 'Please try again.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            
+            # Button for 3rd window
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 150)
 
             window3.mainloop()
             
@@ -212,7 +266,7 @@ def Gum():
 
         # Label and Button for 3rd window
         Label(window3, text = 'Please pick up your Gum and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
-        Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+        Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 105)
 
         window3.mainloop()
 
@@ -257,10 +311,37 @@ def Gum():
            
             # Label and Button for 3rd window
             Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
-            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 105)
 
             window3.mainloop()
 
+        # If the user input less than the exact amount
+        elif a <= 25:
+            # Create the 3rd window
+            window2.destroy()
+            window3 = Tk()
+            window3.title("Thank you, Come Again!!!")
+            window3.geometry("600x400+10+20")
+
+            # Function for Okay button in 3rd window
+            def Okay():
+                window3.destroy()
+                
+            # Blank space
+            canvas = Canvas(window3, width= 500, height= 10)
+            canvas.pack(side = TOP, pady = 10) 
+
+            # Calculate the Lacking amount and display it
+            Base = int(25)
+            Label(window3, text = 'The amount you have is not enough.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            Label(window3, text = f'You need {Base - a} cents more.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            Label(window3, text = 'Please try again.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            
+            # Button for 3rd window
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 150)
+
+            window3.mainloop()
+            
     # Creating the Ok and Cancel button
     Button(window2,width= 10, text="Okay",font="Helveica 10", command = Proceed).place(x = 180, y = 105)
     Button(window2,width= 10, text="Cancel",font="Helveica 10", command = Cancel).place(x = 320, y = 105)
@@ -302,7 +383,7 @@ def Cookies():
 
         # Label and Button for 3rd window
         Label(window3, text = 'Please pick up your Cookies and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
-        Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+        Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 105)
 
         window3.mainloop()
 
@@ -347,10 +428,37 @@ def Cookies():
            
             # Label and Button for 3rd window
             Label(window3, text = 'Please pick up your Candy and enjoy!!!', font=' Helvetica 10').pack(side=TOP)
-            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 180, y = 105)
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 105)
 
             window3.mainloop()
            
+        # If the user input less than the exact amount
+        elif a <= 90:
+            # Create the 3rd window
+            window2.destroy()
+            window3 = Tk()
+            window3.title("Thank you, Come Again!!!")
+            window3.geometry("600x400+10+20")
+
+            # Function for Okay button in 3rd window
+            def Okay():
+                window3.destroy()
+                
+            # Blank space
+            canvas = Canvas(window3, width= 500, height= 10)
+            canvas.pack(side = TOP, pady = 10) 
+
+            # Calculate the Lacking amount and display it
+            Base = int(90)
+            Label(window3, text = 'The amount you have is not enough.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            Label(window3, text = f'You need {Base - a} cents more.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            Label(window3, text = 'Please try again.', font=' Helvetica 10').pack(side=TOP, pady=5)
+            
+            # Button for 3rd window
+            Button(window3,width= 10, text="Okay",font="Helveica 10", command = Okay).place(x = 250, y = 150)
+
+            window3.mainloop()
+            
     # Creating the Ok and Cancel button
     Button(window2,width= 10, text="Okay",font="Helveica 10", command = Proceed).place(x = 180, y = 105)
     Button(window2,width= 10, text="Cancel",font="Helveica 10", command = Cancel).place(x = 320, y = 105)
